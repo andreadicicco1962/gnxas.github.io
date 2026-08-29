@@ -327,21 +327,50 @@
 
           <div class="redbook-spotlight-details">
             <span class="section-badge" style="background:rgba(255,255,255,0.15); color:var(--white); border-color:rgba(255,255,255,0.3);">Official Handbook</span>
-            <h3>The GNXAS "Red-Book" User Manual</h3>
-            <p>
-              "GNXAS: A software package for advanced EXAFS multiple-scattering calculations and data-analysis" — Published in <em>TASK QUARTERLY Vol. 4, No 4, 575-669 (2000)</em>.
-            </p>
-            <p style="font-size: 0.92rem; opacity: 0.9;">
-              <strong>Authors:</strong> Adriano Filipponi & Andrea Di Cicco.<br>
-              The full 96-page comprehensive manual covering $g_n$ distribution function theory, code architecture (<code>CRYMOL</code>, <code>PHAGEN</code>, <code>GNPEAK</code>, <code>GNXAS</code>, <code>FITHEO</code>), statistical error analysis, and $g(r)$ liquid-state refinements.
-            </p>
+            <h3>GNXAS Official Documentation</h3>
+            <div style="font-size: 0.94rem; line-height: 1.65; opacity: 0.95; margin-bottom: 1.25rem;">
+              <p style="margin-bottom: 0.75rem;">
+                <strong>GNXAS. Extended Suite of Programs for Advanced X-Ray Absorption Data-Analysis: Methodology and Practice</strong><br>
+                <span style="font-size: 0.85rem; color: var(--accent-cyan);">July 2009 • ISBN 978-83-908112-8-4 • Edited by A. Di Cicco</span>
+              </p>
 
-            <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
-              <!-- Single Download Button -->
-              <a href="downloads/RedBook.pdf" download class="btn btn-primary" style="background: var(--white); color: var(--red-book); box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                Download Red-Book PDF Manual
-              </a>
+              <p style="margin-bottom: 0.75rem;">
+                This updated handbook provides comprehensive documentation for the GNXAS suite of programs, expanding upon the initial 2000 publication in <em>TASK Quarterly (Vol. 4, No 4, 575–669)</em>. The GNXAS suite is a versatile scientific software designed for ab initio multiple-scattering EXAFS calculations, achieving reliable short-range structural refinements essential for modern synchrotron radiation experiments.
+              </p>
+
+              <p style="margin-bottom: 0.75rem;">
+                The handbook details the core EXAFS refinement pipeline (<code>CRYMOL</code>, <code>PHAGEN</code>, <code>GNPEAK</code>, <code>GNXAS</code>, <code>FITHEO</code>), procedures for statistical error analysis, and specialized models for liquid and highly disordered systems. It also documents extended utilities including Reverse Monte Carlo refinements (<code>RMC-GNXAS</code>), high-pressure diffraction (<code>EDXRD</code>), peak fitting (<code>PEAKFIT</code>), and the web-based GUI (<code>GNXAS2</code>).
+              </p>
+
+              <p style="font-size: 0.88rem; opacity: 0.85; font-style: italic; margin-bottom: 0;">
+                Original theoretical foundation published in <em>Phys. Rev. B 52, 15122 & 15135 (1995)</em>.
+              </p>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+              <h4 style="color: var(--white); font-size: 1.15rem; margin-bottom: 0.5rem;">Order the Physical Handbook (July 2009)</h4>
+              <p style="font-size: 0.88rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.6;">
+                <em>ISBN 978-83-908112-8-4 • Edited by A. Di Cicco</em><br>
+                The <strong>12 Euro</strong> fee covers mail and production costs only. Accepted payment methods: PayPal or Credit Card.<br>
+                <strong>Step 1:</strong> <a href="mailto:andrea.dicicco@unicam.it?subject=GnXAS%20handbook%20order&body=My%20full%20name%20and%20shipping%20address" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 600;">Send us your FULL SHIPPING address via email.</a><br>
+                <strong>Step 2:</strong> Complete your secure payment via PayPal below.
+              </p>
+
+              <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+                <!-- Authentic PayPal Form from gnxas.unicam.it -->
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin:0;">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHVwYJKoZIhvcNAQcEoIIHSDCCB0QCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBl/2yhkTTzMVP0EmK00u+d3RNrs71G+6lO14HqGOmHLzbfvM6NL0H/ElN71D4L99rwjaHT25PRfKDguW5Z3ggRqGhKT0Hq2NSV99Ji1+ZDNayTPu8APdOfnYSvdSx2Nh7dJWPwKlghUMKJ8p6A2RbdHLAbKlyIjUk1qQW2AMr2aDELMAkGBSsOAwIaBQAwgdQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIgDKawu0DowmAgbBDhgV7oaAjzQ1Hbb9VfJcDoiGIPyBAa9pJ07WN8BU7udwozDOKtTyeR/E1aiXLOH10IPOJrBgpexa3lfBs/yyFGAsPvAaRO9MeG7NekQMizBFNNsGHZ9x0pGDaY34c1GY6bkLHcfxiInNuUzfKviQhWk2rwWNgicLWRJRO2+MrrSCjYnaD9ggEhv/IPa8jmuDWAhlnlPLes8Ahfpj0xdlLdhWvpxwIyN9AI64JsB0oHqCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTIzMDUxODA3MzgzNlowIwYJKoZIhvcNAQkEMRYEFIF4Ue+OhXrgtW97zk/K4Uk+QJMfMA0GCSqGSIb3DQEBAQUABIGAbj5i+7nsAkSy8hT1HU/C8pgYhfHnzCsZlswy9Ss7ygmzQ3GLFKK68n5XiOpoCoHXxVvNaHNdHsIf+XNiKllttMSr97eTZ4uGyA2bhK4yLSYkdrw3yLrhRd7rWkO0d4jfMYnPT9CeLeAkb4A/eCV2cdWOMpPyVc63tnZEnRU3OYU=-----END PKCS7-----">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Buy Now with PayPal or Credit Card" style="display: block; transition: transform 0.2s; border-radius: 4px;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+                </form>
+
+                <!-- Download TASK Article Button -->
+                <a href="downloads/RedBook.pdf" download class="btn btn-outline-light" style="border-color: rgba(255,255,255,0.4); min-height: 47px;">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  Download TASK Article PDF (2000)
+                </a>
+              </div>
             </div>
 
             <!-- Historical Intensive Training Courses Highlights -->
@@ -803,12 +832,6 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code>
           <!-- Authors Trio Breakdown Cards -->
           <div class="authors-trio-grid">
             <div class="author-trio-card">
-              <h4>C. R. Natoli</h4>
-              <div class="author-trio-affiliation">INFN - Laboratori Nazionali di Frascati</div>
-              <p>The research effort was based on the work of C. R. Natoli, a pioneer of multiple-scattering applications to EXAFS spectroscopy. Natoli is the main author of the <code>PHAGEN</code> program where all the theory for potential calculation is included.</p>
-            </div>
-
-            <div class="author-trio-card">
               <h4>A. Filipponi</h4>
               <div class="author-trio-affiliation">Università dell'Aquila</div>
               <p>The <code>GNXAS</code> code was mainly written by A. Filipponi, implementing efficient codes for MS calculations with fast matrix products and continued fraction approaches. Co-author of early full 1990 releases.</p>
@@ -818,6 +841,12 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code>
               <h4>A. Di Cicco</h4>
               <div class="author-trio-affiliation">Università di Camerino</div>
               <p><code>FITHEO</code> has been mainly written by A. Di Cicco. A complete version of GNXAS was already available in 1990. Author of <code>RMC-GNXAS</code>, <code>EDXRD</code>, and leader of UNICAM XAS Group.</p>
+            </div>
+
+            <div class="author-trio-card">
+              <h4>C. R. Natoli</h4>
+              <div class="author-trio-affiliation">INFN - Laboratori Nazionali di Frascati</div>
+              <p>The research effort was based on the work of C. R. Natoli, an early pioneer of multiple-scattering applications to EXAFS spectroscopy who provided a historical reference for the potential calculation theory.</p>
             </div>
           </div>
 
@@ -960,7 +989,7 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code>
         <div class="footer-brand">
           <h3>GNXAS Research Group</h3>
           <p>
-            Physics of Matter • Scuola di Scienze e Tecnologie<br>
+            Physics of Matter<br>
             Università di Camerino & Università dell'Aquila, Italy.<br>
             Responsible: Prof. Andrea Di Cicco
           </p>
@@ -1002,18 +1031,7 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code>
       </div>
 
       <div class="footer-bottom">
-        <p>Copyright 1996–2026 XAS Group University of Camerino — Responsible: Prof. Andrea Di Cicco</p>
-
-        <div class="footer-bottom-logos">
-          <!-- Powered by Apache -->
-          <a href="https://httpd.apache.org/" target="_blank" rel="noopener" title="Powered by Apache HTTP Server">
-            <img src="assets/apache_pb (1).gif" alt="powered by APACHE">
-          </a>
-          <!-- ShinyStat Counter Badge -->
-          <span title="ShinyStat Analytics Counter" class="shinystat-badge-box">
-            <img src="assets/shinystat.png" alt="ShinyStat Web Analytics">
-          </span>
-        </div>
+        <p>Responsible: Prof. Andrea Di Cicco</p>
       </div>
     </div>
   </footer>
