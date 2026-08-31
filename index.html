@@ -36,22 +36,44 @@
         </div>
       </a>
 
-      <!-- Streamlined Anchor Nav Links -->
+      <!-- Backdrop Overlay for Mobile Drawer -->
+      <div class="nav-backdrop" id="navBackdrop"></div>
+
+      <!-- Streamlined Anchor Nav Links & Mobile Drawer -->
       <nav class="nav-menu" id="nav-menu">
-        <a href="#intro" class="nav-link active">Overview</a>
-        <a href="#downloads" class="nav-link">Downloads</a>
-        <a href="#documentation" class="nav-link">Documentation</a>
-        <a href="#architecture" class="nav-link">Architecture</a>
-        <a href="#authors" class="nav-link">Authors</a>
-        <a href="#license" class="nav-link">Terms</a>
-        <a href="#downloads" class="nav-cta-btn">Download Setups</a>
+        <div class="nav-menu-header">
+          <div class="nav-menu-brand">
+            <span class="nav-menu-title">GNXAS Menu</span>
+            <span class="nav-menu-sub">Quick Navigation</span>
+          </div>
+          <button class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu">&times;</button>
+        </div>
+
+        <div class="nav-links-container">
+          <a href="#intro" class="nav-link active"><span class="nav-icon">🏠</span> Overview</a>
+          <a href="#downloads" class="nav-link"><span class="nav-icon">⬇️</span> Downloads</a>
+          <a href="#documentation" class="nav-link"><span class="nav-icon">📚</span> Documentation</a>
+          <a href="#wsl-guide" class="nav-link"><span class="nav-icon">💻</span> WSL2 Guide</a>
+          <a href="#architecture" class="nav-link"><span class="nav-icon">⚙️</span> Architecture</a>
+          <a href="#features" class="nav-link"><span class="nav-icon">⚡</span> Features</a>
+          <a href="#onboarding" class="nav-link"><span class="nav-icon">🚀</span> 4 Steps</a>
+          <a href="#authors" class="nav-link"><span class="nav-icon">👥</span> Authors</a>
+          <a href="#license" class="nav-link"><span class="nav-icon">📜</span> Terms</a>
+        </div>
+
+        <div class="nav-menu-footer">
+          <a href="#downloads" class="nav-cta-btn">⬇ Download Setups</a>
+        </div>
       </nav>
 
-      <!-- Hamburger Toggle (Mobile) -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <!-- Prominent Hamburger Button (Mobile) -->
+      <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation menu">
+        <div class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="hamburger-text">Menu</span>
       </button>
     </div>
   </header>
@@ -1042,6 +1064,30 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code></pre>
     </div>
   </footer>
 
+  <!-- Mobile Bottom Quick Navigation Bar -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile quick navigation">
+    <a href="#intro" class="bottom-bar-item" id="bottomNavIntro">
+      <span class="bottom-bar-icon">🏠</span>
+      <span class="bottom-bar-label">Overview</span>
+    </a>
+    <a href="#downloads" class="bottom-bar-item" id="bottomNavDownloads">
+      <span class="bottom-bar-icon">⬇️</span>
+      <span class="bottom-bar-label">Downloads</span>
+    </a>
+    <a href="#documentation" class="bottom-bar-item" id="bottomNavDoc">
+      <span class="bottom-bar-icon">📚</span>
+      <span class="bottom-bar-label">Red-Book</span>
+    </a>
+    <a href="#architecture" class="bottom-bar-item" id="bottomNavArch">
+      <span class="bottom-bar-icon">⚙️</span>
+      <span class="bottom-bar-label">Modules</span>
+    </a>
+    <button class="bottom-bar-item bottom-bar-menu-btn" id="bottomMenuBtn" aria-label="Open Full Navigation Menu">
+      <span class="bottom-bar-icon">☰</span>
+      <span class="bottom-bar-label">Menu</span>
+    </button>
+  </nav>
+
   <!-- Scroll to Top Floating Button -->
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path></svg>
@@ -1053,16 +1099,40 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code></pre>
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('navBackdrop');
+    const navCloseBtn = document.getElementById('navCloseBtn');
+    const bottomMenuBtn = document.getElementById('bottomMenuBtn');
+
+    // Open / Close Drawer Helper
+    function openMobileMenu() {
+      hamburger.classList.add('open');
+      navMenu.classList.add('active');
+      navBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      hamburger.classList.remove('open');
+      navMenu.classList.remove('active');
+      navBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
 
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      navMenu.classList.toggle('active');
+      if (navMenu.classList.contains('active')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
+
+    if (navCloseBtn) navCloseBtn.addEventListener('click', closeMobileMenu);
+    if (navBackdrop) navBackdrop.addEventListener('click', closeMobileMenu);
+    if (bottomMenuBtn) bottomMenuBtn.addEventListener('click', openMobileMenu);
 
     document.querySelectorAll('.nav-link, .nav-cta-btn').forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        navMenu.classList.remove('active');
+        closeMobileMenu();
       });
     });
 
