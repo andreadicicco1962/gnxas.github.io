@@ -36,44 +36,22 @@
         </div>
       </a>
 
-      <!-- Backdrop Overlay for Mobile Drawer -->
-      <div class="nav-backdrop" id="navBackdrop"></div>
-
-      <!-- Streamlined Anchor Nav Links & Mobile Drawer -->
+      <!-- Streamlined Anchor Nav Links -->
       <nav class="nav-menu" id="nav-menu">
-        <div class="nav-menu-header">
-          <div class="nav-menu-brand">
-            <span class="nav-menu-title">GNXAS Menu</span>
-            <span class="nav-menu-sub">Quick Navigation</span>
-          </div>
-          <button class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu">&times;</button>
-        </div>
-
-        <div class="nav-links-container">
-          <a href="#intro" class="nav-link active"><span class="nav-icon">🏠</span> Overview</a>
-          <a href="#downloads" class="nav-link"><span class="nav-icon">⬇️</span> Downloads</a>
-          <a href="#documentation" class="nav-link"><span class="nav-icon">📚</span> Documentation</a>
-          <a href="#wsl-guide" class="nav-link"><span class="nav-icon">💻</span> WSL2 Guide</a>
-          <a href="#architecture" class="nav-link"><span class="nav-icon">⚙️</span> Architecture</a>
-          <a href="#features" class="nav-link"><span class="nav-icon">⚡</span> Features</a>
-          <a href="#onboarding" class="nav-link"><span class="nav-icon">🚀</span> 4 Steps</a>
-          <a href="#authors" class="nav-link"><span class="nav-icon">👥</span> Authors</a>
-          <a href="#license" class="nav-link"><span class="nav-icon">📜</span> Terms</a>
-        </div>
-
-        <div class="nav-menu-footer">
-          <a href="#downloads" class="nav-cta-btn">⬇ Download Setups</a>
-        </div>
+        <a href="#intro" class="nav-link active">Overview</a>
+        <a href="#downloads" class="nav-link">Downloads</a>
+        <a href="#documentation" class="nav-link">Documentation</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#authors" class="nav-link">Authors</a>
+        <a href="#license" class="nav-link">Terms</a>
+        <a href="#downloads" class="nav-cta-btn">Download Setups</a>
       </nav>
 
-      <!-- Prominent Hamburger Button (Mobile) -->
-      <button class="hamburger-btn" id="hamburger" aria-label="Toggle navigation menu">
-        <div class="hamburger-lines">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <span class="hamburger-text">Menu</span>
+      <!-- Hamburger Toggle (Mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </header>
@@ -434,13 +412,13 @@
              5. INTERACTIVE WSL2 QUICK-START SNIPPETS (#wsl-guide)
              ========================================== -->
         <div class="wsl-terminal-section" id="wsl-guide">
-          <div class="wsl-section-header">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
             <div>
               <span class="section-badge" style="background: rgba(14, 165, 233, 0.15); color: var(--accent-cyan); border-color: rgba(14, 165, 233, 0.3);">Terminal Setup</span>
-              <h3 class="wsl-guide-title">WSL2 Quick-Start Guide</h3>
+              <h3 style="font-size: 1.75rem; color: var(--white); margin-top: 0.25rem; margin-bottom: 0;">WSL2 Quick-Start Guide</h3>
             </div>
             <!-- Official Microsoft WSL Guide Button -->
-            <a href="https://learn.microsoft.com/it-it/windows/wsl/install" target="_blank" rel="noopener" class="btn btn-outline-light wsl-ms-btn">
+            <a href="https://learn.microsoft.com/it-it/windows/wsl/install" target="_blank" rel="noopener" class="btn btn-outline-light" style="font-size: 0.82rem; padding: 0.5rem 1rem;">
               📖 Microsoft WSL Guide &rarr;
             </a>
           </div>
@@ -454,47 +432,38 @@
 
           <!-- Tab 1 -->
           <div class="wsl-tab-content active" id="tab-1">
-            <p class="wsl-tab-desc">
+            <p style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.75); margin-bottom: 0.75rem;">
               Install required core compiler libraries, plotting dependencies (gnuplot), text editor, and X11 graphics apps:
             </p>
             <div class="terminal-block">
-              <div class="terminal-topbar">
-                <span class="terminal-lang">BASH</span>
-                <button class="terminal-copy-btn" onclick="copySnippet('cmd-1', this)">Copy Snippet</button>
-              </div>
-              <pre><code id="cmd-1">sudo apt-get update
-sudo apt-get install -y gnuplot emacs libquadmath0 x11-apps</code></pre>
+              <button class="terminal-copy-float" onclick="copySnippet('cmd-1', this)">Copy</button>
+              <code id="cmd-1">sudo apt-get update
+sudo apt-get install -y gnuplot emacs libquadmath0 x11-apps</code>
             </div>
           </div>
 
           <!-- Tab 2 -->
           <div class="wsl-tab-content" id="tab-2">
-            <p class="wsl-tab-desc">
+            <p style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.75); margin-bottom: 0.75rem;">
               Enable 32-bit architecture for TopDrawer / CERNLIB graphics library compatibility:
             </p>
             <div class="terminal-block">
-              <div class="terminal-topbar">
-                <span class="terminal-lang">BASH</span>
-                <button class="terminal-copy-btn" onclick="copySnippet('cmd-2', this)">Copy Snippet</button>
-              </div>
-              <pre><code id="cmd-2">sudo dpkg --add-architecture i386
+              <button class="terminal-copy-float" onclick="copySnippet('cmd-2', this)">Copy</button>
+              <code id="cmd-2">sudo dpkg --add-architecture i386
 sudo apt-get update
-sudo apt-get install -y libx11-6:i386 libxt6:i386 libxext6:i386</code></pre>
+sudo apt-get install -y libx11-6:i386 libxt6:i386 libxext6:i386</code>
             </div>
           </div>
 
           <!-- Tab 3 -->
           <div class="wsl-tab-content" id="tab-3">
-            <p class="wsl-tab-desc">
+            <p style="font-size: 0.88rem; color: rgba(255, 255, 255, 0.75); margin-bottom: 0.75rem;">
               Unpack the downloaded GNXAS tarball and add executables to your bash environment path:
             </p>
             <div class="terminal-block">
-              <div class="terminal-topbar">
-                <span class="terminal-lang">BASH</span>
-                <button class="terminal-copy-btn" onclick="copySnippet('cmd-3', this)">Copy Snippet</button>
-              </div>
-              <pre><code id="cmd-3">tar -xvf gnxas_12_2025_Linux_64deb.tar.gz
-export PATH=$PATH:$(pwd)/gnxas/bin</code></pre>
+              <button class="terminal-copy-float" onclick="copySnippet('cmd-3', this)">Copy</button>
+              <code id="cmd-3">tar -xvf gnxas_12_2025_Linux_64deb.tar.gz
+export PATH=$PATH:$(pwd)/gnxas/bin</code>
             </div>
           </div>
         </div>
@@ -1064,30 +1033,6 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code></pre>
     </div>
   </footer>
 
-  <!-- Mobile Bottom Quick Navigation Bar -->
-  <nav class="mobile-bottom-bar" aria-label="Mobile quick navigation">
-    <a href="#intro" class="bottom-bar-item" id="bottomNavIntro">
-      <span class="bottom-bar-icon">🏠</span>
-      <span class="bottom-bar-label">Overview</span>
-    </a>
-    <a href="#downloads" class="bottom-bar-item" id="bottomNavDownloads">
-      <span class="bottom-bar-icon">⬇️</span>
-      <span class="bottom-bar-label">Downloads</span>
-    </a>
-    <a href="#documentation" class="bottom-bar-item" id="bottomNavDoc">
-      <span class="bottom-bar-icon">📚</span>
-      <span class="bottom-bar-label">Red-Book</span>
-    </a>
-    <a href="#architecture" class="bottom-bar-item" id="bottomNavArch">
-      <span class="bottom-bar-icon">⚙️</span>
-      <span class="bottom-bar-label">Modules</span>
-    </a>
-    <button class="bottom-bar-item bottom-bar-menu-btn" id="bottomMenuBtn" aria-label="Open Full Navigation Menu">
-      <span class="bottom-bar-icon">☰</span>
-      <span class="bottom-bar-label">Menu</span>
-    </button>
-  </nav>
-
   <!-- Scroll to Top Floating Button -->
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path></svg>
@@ -1099,40 +1044,16 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code></pre>
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-    const navBackdrop = document.getElementById('navBackdrop');
-    const navCloseBtn = document.getElementById('navCloseBtn');
-    const bottomMenuBtn = document.getElementById('bottomMenuBtn');
-
-    // Open / Close Drawer Helper
-    function openMobileMenu() {
-      hamburger.classList.add('open');
-      navMenu.classList.add('active');
-      navBackdrop.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMobileMenu() {
-      hamburger.classList.remove('open');
-      navMenu.classList.remove('active');
-      navBackdrop.classList.remove('active');
-      document.body.style.overflow = '';
-    }
 
     hamburger.addEventListener('click', () => {
-      if (navMenu.classList.contains('active')) {
-        closeMobileMenu();
-      } else {
-        openMobileMenu();
-      }
+      hamburger.classList.toggle('open');
+      navMenu.classList.toggle('active');
     });
-
-    if (navCloseBtn) navCloseBtn.addEventListener('click', closeMobileMenu);
-    if (navBackdrop) navBackdrop.addEventListener('click', closeMobileMenu);
-    if (bottomMenuBtn) bottomMenuBtn.addEventListener('click', openMobileMenu);
 
     document.querySelectorAll('.nav-link, .nav-cta-btn').forEach(link => {
       link.addEventListener('click', () => {
-        closeMobileMenu();
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('active');
       });
     });
 
