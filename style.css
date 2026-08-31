@@ -1597,6 +1597,15 @@ section {
   transform: translateY(-3px);
 }
 
+.redbook-order-box {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 /* --------------------------------------------------------------------------
    13. Comprehensive Mobile & Smartphone Optimization
    -------------------------------------------------------------------------- */
@@ -1907,5 +1916,43 @@ section {
 
   .footer-bottom-logos {
     justify-content: center;
+  }
+
+  /* Robust Smartphone Layout Overflow Safeguards */
+  .btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .doc-wsl-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .terminal-block code {
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+  }
+
+  .hero-funding-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .redbook-order-box {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .features-compact-grid {
+    grid-template-columns: 1fr;
   }
 }
