@@ -283,8 +283,8 @@
               </a>
 
               <div style="background: #090e17; padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); margin-top: 0.25rem;">
-                <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #38bdf8; display: flex; justify-content: space-between; align-items: center;">
-                  <span>$ wsl --install -d Ubuntu</span>
+                <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #38bdf8; display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                  <span style="word-break: break-word;">$ wsl --install -d Ubuntu</span>
                   <button class="terminal-copy-btn" onclick="copyWSLCommand(this)" style="padding: 0.25rem 0.5rem; font-size: 0.72rem;">Copy</button>
                 </div>
               </div>
@@ -347,7 +347,7 @@
               </p>
             </div>
 
-            <div style="background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="redbook-order-box">
               <h4 style="color: var(--white); font-size: 1.15rem; margin-bottom: 0.5rem;">Order the Physical Handbook (July 2009)</h4>
               <p style="font-size: 0.88rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; line-height: 1.6;">
                 <em>ISBN 978-83-908112-8-4 • Edited by A. Di Cicco</em><br>
@@ -412,14 +412,14 @@
              5. INTERACTIVE WSL2 QUICK-START SNIPPETS (#wsl-guide)
              ========================================== -->
         <div class="wsl-terminal-section" id="wsl-guide">
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="wsl-section-header">
             <div>
               <span class="section-badge" style="background: rgba(14, 165, 233, 0.15); color: var(--accent-cyan); border-color: rgba(14, 165, 233, 0.3);">Terminal Setup</span>
-              <h3 style="font-size: 1.75rem; color: var(--white); margin-top: 0.25rem;">WSL2 Interactive Quick-Start Guide</h3>
+              <h3 class="wsl-guide-title">WSL2 Quick-Start Guide</h3>
             </div>
             <!-- Official Microsoft WSL Guide Button -->
-            <a href="https://learn.microsoft.com/it-it/windows/wsl/install" target="_blank" rel="noopener" class="btn btn-outline-light" style="font-size: 0.82rem; padding: 0.5rem 1rem;">
-              📖 Read Microsoft WSL Official Guide &rarr;
+            <a href="https://learn.microsoft.com/it-it/windows/wsl/install" target="_blank" rel="noopener" class="btn btn-outline-light wsl-ms-btn">
+              📖 Microsoft WSL Guide &rarr;
             </a>
           </div>
 
@@ -432,38 +432,47 @@
 
           <!-- Tab 1 -->
           <div class="wsl-tab-content active" id="tab-1">
-            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-bottom: 0.75rem;">
+            <p class="wsl-tab-desc">
               Install required core compiler libraries, plotting dependencies (gnuplot), text editor, and X11 graphics apps:
             </p>
             <div class="terminal-block">
-              <button class="terminal-copy-float" onclick="copySnippet('cmd-1', this)">Copy Snippet</button>
-              <code id="cmd-1">sudo apt-get update
-sudo apt-get install -y gnuplot emacs libquadmath0 x11-apps</code>
+              <div class="terminal-topbar">
+                <span class="terminal-lang">BASH</span>
+                <button class="terminal-copy-btn" onclick="copySnippet('cmd-1', this)">Copy Snippet</button>
+              </div>
+              <pre><code id="cmd-1">sudo apt-get update
+sudo apt-get install -y gnuplot emacs libquadmath0 x11-apps</code></pre>
             </div>
           </div>
 
           <!-- Tab 2 -->
           <div class="wsl-tab-content" id="tab-2">
-            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-bottom: 0.75rem;">
+            <p class="wsl-tab-desc">
               Enable 32-bit architecture for TopDrawer / CERNLIB graphics library compatibility:
             </p>
             <div class="terminal-block">
-              <button class="terminal-copy-float" onclick="copySnippet('cmd-2', this)">Copy Snippet</button>
-              <code id="cmd-2">sudo dpkg --add-architecture i386
+              <div class="terminal-topbar">
+                <span class="terminal-lang">BASH</span>
+                <button class="terminal-copy-btn" onclick="copySnippet('cmd-2', this)">Copy Snippet</button>
+              </div>
+              <pre><code id="cmd-2">sudo dpkg --add-architecture i386
 sudo apt-get update
-sudo apt-get install -y libx11-6:i386 libxt6:i386 libxext6:i386</code>
+sudo apt-get install -y libx11-6:i386 libxt6:i386 libxext6:i386</code></pre>
             </div>
           </div>
 
           <!-- Tab 3 -->
           <div class="wsl-tab-content" id="tab-3">
-            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-bottom: 0.75rem;">
+            <p class="wsl-tab-desc">
               Unpack the downloaded GNXAS tarball and add executables to your bash environment path:
             </p>
             <div class="terminal-block">
-              <button class="terminal-copy-float" onclick="copySnippet('cmd-3', this)">Copy Snippet</button>
-              <code id="cmd-3">tar -xvf gnxas_12_2025_Linux_64deb.tar.gz
-export PATH=$PATH:$(pwd)/gnxas/bin</code>
+              <div class="terminal-topbar">
+                <span class="terminal-lang">BASH</span>
+                <button class="terminal-copy-btn" onclick="copySnippet('cmd-3', this)">Copy Snippet</button>
+              </div>
+              <pre><code id="cmd-3">tar -xvf gnxas_12_2025_Linux_64deb.tar.gz
+export PATH=$PATH:$(pwd)/gnxas/bin</code></pre>
             </div>
           </div>
         </div>
@@ -474,9 +483,6 @@ export PATH=$PATH:$(pwd)/gnxas/bin</code>
          6. SOFTWARE SUITE ARCHITECTURE (#architecture)
          ========================================== -->
     <section class="architecture-section" id="architecture">
-      <!-- Yellow Atomic Structure Graphic Accent -->
-      <img src="assets/nedge_yel.gif" alt="Atomic Structure Accent" class="corner-yellow-graphic">
-
       <div class="container">
         <div class="section-header">
           <span class="section-badge">Program Modules</span>
